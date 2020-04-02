@@ -1,4 +1,6 @@
-CREATE DATABASE ART CREATE TABLE works (
+CREATE DATABASE ART 
+
+CREATE TABLE works (
     id serial PRIMARY KEY,
     artist text,
     worksimg image,
