@@ -20,16 +20,18 @@ class ArtImageModel {
       console.log("Error", error);
       return error;
     }
-  };
+  }
 
   static async getWorksById(worksimg) {
-      try {
-          const response = await db.any(`SELECT * FROM works WHERE id = ${worksimg}`)
-          return response
-      } catch (error) {
-          console.error("error", error)
-          return error
-      }
+    try {
+      const response = await db.any(
+        `SELECT * FROM works WHERE id = ${worksimg}`
+      );
+      return response;
+    } catch (error) {
+      console.error("error", error);
+      return error;
+    }
   }
 }
 
