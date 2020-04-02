@@ -76,3 +76,5 @@ VALUES
         1,
         'Wangcheti Mutu is an artist that has influenced my work greatly. Thank you for sharing.'
     )
+
+-- Info provided by Saatchi Gallery: https://www.saatchigallery.com/artists/wangechi_mutu.html

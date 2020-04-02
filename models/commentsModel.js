@@ -30,11 +30,11 @@ class CommentsModel {
     }
   }
 
-  async addComment(user_id, comment) {
+  async addComment(user_id, img_id, comment) {
     try {
       const response = await db.one(
-        `INSERT INTO comments (user_id, picture_id, comment) VALUES ($1, $2, $3) RETURNING id`,
-        [this.user_id, this.picture_id, this.comment]
+        `INSERT INTO comments (user_id, img_id, comment) VALUES ($1, $2, $3) RETURNING id`,
+        [this.user_id, this.img_id, this.comment]
       );
       return response;
     } catch (err) {
