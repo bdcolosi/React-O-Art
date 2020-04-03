@@ -16,9 +16,8 @@ class ArtImageModel {
     try {
       const response = await db.any(`SELECT * FROM works`);
       return response;
-    } catch (error) {
-      console.log("Error", error);
-      return error;
+    } catch (err) {
+      return err.message;
     }
   }
 
@@ -28,9 +27,8 @@ class ArtImageModel {
         `SELECT * FROM works WHERE id = ${worksimg}`
       );
       return response;
-    } catch (error) {
-      console.error("error", error);
-      return error;
+    } catch (err) {
+      return err.message;
     }
   }
 }

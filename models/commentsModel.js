@@ -12,9 +12,8 @@ class CommentsModel {
     try {
       const response = await db.any(`SELECT * FROM comments;`);
       return response;
-    } catch (error) {
-      console.error("Error", error);
-      return error;
+    } catch (err) {
+      return err.message;
     }
   }
 
@@ -24,9 +23,8 @@ class CommentsModel {
         `SELECT * FROM comments WHERE img_id = ${img_id};`
       );
       return response;
-    } catch (error) {
-      console.error("Error", error);
-      return error;
+    } catch (err) {
+      return err.message;
     }
   }
 

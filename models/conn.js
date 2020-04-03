@@ -4,8 +4,8 @@ const pgp = require('pg-promise')({
     }
 });
 const option = {
-    host: 'local',
-    database: 'ART'
+    host: 'localhost',
+    database: 'art'
 };
 const db = pgp(option);
 

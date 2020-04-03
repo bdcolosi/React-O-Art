@@ -3,7 +3,7 @@ CREATE DATABASE ART
 CREATE TABLE works (
     id serial PRIMARY KEY,
     artist text,
-    worksimg image,
+    worksimg text,
     title text,
     description text,
     medium text,
@@ -27,18 +27,19 @@ CREATE TABLE comments (
 
 INSERT INTO
     works (
+        artist,
         worksimg,
         title,
         description,
         medium,
         size,
         year,
-        artist
+        
     )
 VALUES
     (
         'Wangechi Mutu',
-        '',
+        'public/Ghouls-on-my-back-Wangechi-mutu.jpg',
         'Ghouls On My Back Celebrate Murder',
         'Wangechi Mutu uses collage as a means of both physically and conceptually bringing layered depth to her work. 
         Using images cut from fashion magazines, National Geographic, and books about African art, Mutu pieces together figures which are 
@@ -47,9 +48,9 @@ VALUES
         'Mixed media on mylar',
         '90 x 61cm',
         2003
-    ) (
+    ); (
         'Wangechi Mutu',
-        '',
+        'public/Mask-WangchetiMutu.jpg',
         'Mask',
         'Wangechi Mutu’s Mask draws provocative comparison between archaeology and sexual fetishism. 
         Pasted over the photo of a museum relic, her saucy model becomes a temptress of caricatured exotica. 
@@ -59,7 +60,7 @@ VALUES
         'Mixed media and collage',
         '16.5 x 12.7 cm',
         2006
-    )
+    );
 INSERT INTO
     users (name, email, password)
 VALUES
@@ -67,14 +68,14 @@ VALUES
         'Brooke Colosi',
         'b@gmail.com',
         'ShadowOnyx'
-    )
+    );
 INSERT INTO
     comments (user_id, img_id, comment)
 VALUES
     (
         1,
         1,
-        'Wangcheti Mutu is an artist that has influenced my work greatly. Thank you for sharing.'
-    )
+        'Wangechi Mutu is an artist that has influenced my work greatly. Thank you for sharing.'
+    );
 
 -- Info provided by Saatchi Gallery: https://www.saatchigallery.com/artists/wangechi_mutu.html
